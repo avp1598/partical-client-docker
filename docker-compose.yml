@@ -3,6 +3,7 @@ services:
   client:
     container_name: partical_client
     image: "partical1/partical_client:latest"
+    restart: always
     ports:
       - "8080:8080"
     links:
