@@ -8,10 +8,6 @@ services:
       - "8080:8080"
     links:
       - redis
-    environment:
-      ADMIN_AUTH_SECRET: "secret"
-      SUPABASE_KEY: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InBka2xucm5pYWhrbXphdHRkcHp4Iiwicm9sZSI6ImFub24iLCJpYXQiOjE2NTc3Mjc4NTQsImV4cCI6MTk3MzMwMzg1NH0.PgP5Gy2swmstoZlLBjCgfbwLRQIfxJsH8EET42KTLQg"
-      SUPABASE_URL: "https://pdklnrniahkmzattdpzx.supabase.co"
   redis:
     container_name: myapp-redis
     image: "redis:alpine"
