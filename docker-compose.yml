@@ -1,18 +1,18 @@
 version: "3"
 services:
-  # client:
-  #   container_name: partical_client
-  #   image: "partical1/partical_client:latest"
-  #   restart: always
-  #   ports:
-  #     - "8080:8080"
-  #   links:
-  #     - redis
-  # redis:
-  #   container_name: myapp-redis
-  #   image: "redis:alpine"
-  #   ports:
-  #     - "6379:6379"
+  client:
+    container_name: partical_client
+    image: "partical1/partical_client:latest"
+    restart: always
+    ports:
+      - "8080:8080"
+    links:
+      - redis
+  redis:
+    container_name: myapp-redis
+    image: "redis:alpine"
+    ports:
+      - "6379:6379"
   nginx:
     image: jonasal/nginx-certbot:latest
     restart: unless-stopped
