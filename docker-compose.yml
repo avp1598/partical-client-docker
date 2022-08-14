@@ -3,6 +3,8 @@ services:
   client:
     image: "partical1/partical_client:latest"
     restart: always
+    volumes:
+      - /srv/app/prisma
     ports:
       - "8080:8080"
     links:
