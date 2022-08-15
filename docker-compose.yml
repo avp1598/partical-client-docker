@@ -7,9 +7,4 @@ services:
       - /srv/app/prisma
     ports:
       - "8080:8080"
-    links:
-      - redis
-  redis:
-    image: "redis:alpine"
-    ports:
-      - "6379:6379"
+    network_mode: host
