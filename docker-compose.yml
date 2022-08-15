@@ -1,10 +1,49 @@
 version: "3"
 services:
-  client:
+  server1:
     image: "partical1/partical_client:1.0.1"
     restart: always
     volumes:
       - /srv/app/prisma
     ports:
-      - "8080:8080"
-    network_mode: host
+      - "8081:8080"
+    links:
+      - redis
+  server2:
+    image: "partical1/partical_client:1.0.1"
+    restart: always
+    volumes:
+      - /srv/app/prisma
+    ports:
+      - "8082:8080"
+    links:
+      - redis
+  server3:
+    image: "partical1/partical_client:1.0.1"
+    restart: always
+    volumes:
+      - /srv/app/prisma
+    ports:
+      - "8083:8080"
+    links:
+      - redis
+  server4:
+    image: "partical1/partical_client:1.0.1"
+    restart: always
+    volumes:
+      - /srv/app/prisma
+    ports:
+      - "8084:8080"
+    links:
+      - redis
+  server5:
+    image: "partical1/partical_client:1.0.1"
+    restart: always
+    volumes:
+      - /srv/app/prisma
+    ports:
+      - "8085:8080"
+    links:
+      - redis
+  redis:
+    image: "redis:alpine"
