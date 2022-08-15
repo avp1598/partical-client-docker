@@ -1,7 +1,7 @@
 version: "3"
 services:
   client:
-    image: "partical1/partical_client:latest"
+    image: "partical1/partical_client:1.0.1"
     restart: always
     volumes:
       - /srv/app/prisma
