@@ -1,7 +1,7 @@
 version: "3"
 services:
   server1:
-    image: "partical1/partical_client:1.0.1"
+    image: "partical1/partical_client:latest"
     restart: always
     volumes:
       - /srv/app/prisma
@@ -10,7 +10,7 @@ services:
     links:
       - redis
   server2:
-    image: "partical1/partical_client:1.0.1"
+    image: "partical1/partical_client:latest"
     restart: always
     volumes:
       - /srv/app/prisma
@@ -19,7 +19,7 @@ services:
     links:
       - redis
   server3:
-    image: "partical1/partical_client:1.0.1"
+    image: "partical1/partical_client:latest"
     restart: always
     volumes:
       - /srv/app/prisma
@@ -28,7 +28,7 @@ services:
     links:
       - redis
   server4:
-    image: "partical1/partical_client:1.0.1"
+    image: "partical1/partical_client:latest"
     restart: always
     volumes:
       - /srv/app/prisma
@@ -37,7 +37,7 @@ services:
     links:
       - redis
   server5:
-    image: "partical1/partical_client:1.0.1"
+    image: "partical1/partical_client:latest"
     restart: always
     volumes:
       - /srv/app/prisma
